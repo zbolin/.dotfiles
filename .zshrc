@@ -103,12 +103,40 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+##########################################
+# Editing files
+##########################################
+alias fn="nvim $HOME/.zshrc"
+alias ww="nvim $HOME/GitProjects/vimwiki/index.md"
+
+##########################################
+# Navigation
+##########################################
+alias d="cd $HOME/Desktop"
+alias doc="cd $HOME/Documents"
+alias dn="cd $HOME/Downloads"
+alias gp="cd $HOME/GitProjects"
+alias dotfiles="cd $HOME/GitProjects/.dotfiles"
+alias notes="cd $HOME/GitProjects/notes"
+alias wiki="cd $HOME/GitProjects/vimwiki"
+
+##########################################
+# removeing z@zachs-air from terminal line
+##########################################
 export DEFAULT_USER="$(whoami)"
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
     prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
   fi
 }
+get_abs_filename() {
+  # $1 : relative filename
+  echo "$(cd "$(dirname "$1")" && pwd)/$(basename "$1")"
+}
+##########################################
+# .dotfiles
+##########################################
 dot () {
     cp "$@" $HOME/GitProjects/.dotfiles
     get_abs_filename "$@" >> $HOME/GitProjects/.dotfiles/history.txt
@@ -117,15 +145,16 @@ dots () {
     yes | cp -rf "$@" $HOME/GitProjects/.dotfiles
     get_abs_filename "$@" >> $HOME/GitProjects/.dotfiles/history.txt
 }
-get_abs_filename() {
-  # $1 : relative filename
-  echo "$(cd "$(dirname "$1")" && pwd)/$(basename "$1")"
+dotzsh () {
+    source $HOME/.zshrc
+    dot $HOME/.zshrc
+    dotfiles
+    git add .
+    git commit -m "Updated .zshrc"
+    git push
 }
-alias aws="cd $HOME/GitProjects/notes/aws/SAA"
-alias functions="nvim $HOME/.zshrc"
-alias notes="cd $HOME/GitProjects/notes"
-alias ww="nvim $HOME/GitProjects/vimwiki/index.md"
-alias d="cd $HOME/Desktop"
-alias doc="cd $HOME/Documents"
-alias dn="cd $HOME/Downloads"
-alias gp="cd $HOME/GitProjects"
+dotvim () {
+    dots $HOME/.config/nvim
+    dotfiles
+
+}
