@@ -139,11 +139,11 @@ get_abs_filename() {
 ##########################################
 dot () {
     cp "$@" $HOME/GitProjects/.dotfiles
-    get_abs_filename "$@" >> $HOME/GitProjects/.dotfiles/history.txt
+    #get_abs_filename "$@" >> $HOME/GitProjects/.dotfiles/history.txt
 }
 dots () {
     yes | cp -rf "$@" $HOME/GitProjects/.dotfiles
-    get_abs_filename "$@" >> $HOME/GitProjects/.dotfiles/history.txt
+    #get_abs_filename "$@" >> $HOME/GitProjects/.dotfiles/history.txt
 }
 dotall () {
     dotzsh
