@@ -162,7 +162,7 @@ dotvim () {
     dots $HOME/.config/nvim
     dotfiles
     git add .
-    git commit -m "Updated neovim"
+    git commit -m "Updated init.vim"
     git push
     cd $HOME
 }
