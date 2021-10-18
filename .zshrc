@@ -145,6 +145,10 @@ dots () {
     yes | cp -rf "$@" $HOME/GitProjects/.dotfiles
     get_abs_filename "$@" >> $HOME/GitProjects/.dotfiles/history.txt
 }
+dotall () {
+    dotzsh
+    dotvim
+}
 dotzsh () {
     source $HOME/.zshrc
     dot $HOME/.zshrc
@@ -152,9 +156,13 @@ dotzsh () {
     git add .
     git commit -m "Updated .zshrc"
     git push
+    cd $HOME
 }
 dotvim () {
     dots $HOME/.config/nvim
     dotfiles
-
+    git add .
+    git commit -m "Updated neovim"
+    git push
+    cd $HOME
 }
