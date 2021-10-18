@@ -109,6 +109,7 @@ source $ZSH/oh-my-zsh.sh
 ##########################################
 alias fn="nvim $HOME/.zshrc"
 alias ww="nvim $HOME/GitProjects/vimwiki/index.md"
+alias vimnotes="nvim $HOME/GitProjects/notes/vimnotes.txt"
 
 ##########################################
 # Navigation
