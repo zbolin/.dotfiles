@@ -105,12 +105,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 dot () {
     cp "$@" $HOME/GitProjects/.dotfiles
-    get_abs_filename "$@" >> $HOME/GitProjects/.dotfiles/HISTORY.md
+    get_abs_filename "$@" >> $HOME/GitProjects/.dotfiles/history.txt
 }
 
 dots () {
     yes | cp -rf "$@" $HOME/GitProjects/.dotfiles
-    realpath "$@" >> $HOME/GitProjects/.dotfiles/HISTORY.md
+    get_abs_filename "$@" >> $HOME/GitProjects/.dotfiles/history.txt
 }
 
 get_abs_filename() {
