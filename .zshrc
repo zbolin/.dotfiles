@@ -105,10 +105,15 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 dot () {
     cp "$@" $HOME/GitProjects/.dotfiles
-    realpath "$@" >> $HOME/GitProjects/.dotfiles/HISTORY.md
+    get_abs_filename "$@" >> $HOME/GitProjects/.dotfiles/HISTORY.md
 }
 
 dots () {
     yes | cp -rf "$@" $HOME/GitProjects/.dotfiles
     realpath "$@" >> $HOME/GitProjects/.dotfiles/HISTORY.md
+}
+
+get_abs_filename() {
+  # $1 : relative filename
+  echo "$(cd "$(dirname "$1")" && pwd)/$(basename "$1")"
 }

@@ -1,3 +1,3 @@
 # History
-/Users/z/.config/nvim
 /Users/z/.zshrc
+/Users/z/.config/nvim
