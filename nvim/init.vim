@@ -1,6 +1,5 @@
 " vim rc !
 set nocompatible
-
 filetype off
 set tabstop=4 softtabstop=4
 set shiftwidth=4
