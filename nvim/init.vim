@@ -23,12 +23,9 @@ set scrolloff=26
 set signcolumn=yes
 set cmdheight=2
 set encoding=UTF-8
-
-
-
 inoremap kj <ESC>
 inoremap KJ <ESC>
-" hey
+
 " copy and paste
 vmap <C-c> "+yi
 vmap <C-x> "+c
@@ -42,6 +39,7 @@ nnoremap <Leader>a :e $USERPROFILE\GitProjects\cmd\aliases.cmd<cr>
 nnoremap <leader>c :ChecklistToggleCheckbox<cr>
 nnoremap <leader>n :NERDTree<CR>
 nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>md :InstantMarkdownPreview<CR>
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-fugitive'
@@ -51,6 +49,8 @@ Plug 'morhetz/gruvbox'
 Plug 'mbbill/undotree'
 Plug 'psliwka/vim-smoothie'
 Plug 'evansalter/vim-checklist'
+Plug 'vimwiki/vimwiki'
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 call plug#end()
 
 set background=dark
@@ -66,7 +66,8 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
-
+"Instant markdown
+let g:instant_markdown_autostart = 0
 nnoremap <leader>j <C-W>j
 nnoremap <leader>k <C-W>k
 nnoremap <leader>l <C-W>l

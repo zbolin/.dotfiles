@@ -122,4 +122,10 @@ get_abs_filename() {
   echo "$(cd "$(dirname "$1")" && pwd)/$(basename "$1")"
 }
 alias aws="cd $HOME/GitProjects/notes/aws/SAA"
-
+alias functions="nvim $HOME/.zshrc"
+alias notes="cd $HOME/GitProjects/notes"
+alias ww="nvim $HOME/GitProjects/vimwiki/index.md"
+alias d="cd $HOME/Desktop"
+alias doc="cd $HOME/Documents"
+alias dn="cd $HOME/Downloads"
+alias gp="cd $HOME/GitProjects"
