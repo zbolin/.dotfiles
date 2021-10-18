@@ -3,3 +3,5 @@
 /Users/z/.zshrc
 /Users/z/.zshrc
 /Users/z/.config/nvim
+/Users/z/.zsrc
+/Users/z/.zshrc

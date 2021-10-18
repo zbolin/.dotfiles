@@ -103,6 +103,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+prompt_context() {
+  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+  fi
+}
 dot () {
     cp "$@" $HOME/GitProjects/.dotfiles
     get_abs_filename "$@" >> $HOME/GitProjects/.dotfiles/history.txt
@@ -117,3 +122,5 @@ get_abs_filename() {
   # $1 : relative filename
   echo "$(cd "$(dirname "$1")" && pwd)/$(basename "$1")"
 }
+
+export DEFAULT_USER="$(whoami)"
