@@ -108,6 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # Editing files
 ##########################################
 alias fn="nvim $HOME/.zshrc"
+alias ww="nvim $HOME/GitProjects/vimwiki/index.md"
 alias aws="nvim $HOME/GitProjects/vimwiki/aws/dva/index.md"
 alias vimnotes="nvim $HOME/GitProjects/notes/vimnotes.txt"
 
