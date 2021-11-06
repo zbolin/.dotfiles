@@ -1,3 +1,6 @@
+"lua <<EOF
+"print('hello from lua')
+"EOF
 " vim rc !
 set nocompatible
 filetype off
@@ -32,7 +35,9 @@ vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 
-let mapleader = " "
+
+lua require("bozilla.settings")
+"let mapleader = " "
 nnoremap <Leader>s :e $USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json<cr>
 nnoremap <Leader>v :e $MYVIMRC<cr>
 nnoremap <Leader>a :e $USERPROFILE\GitProjects\cmd\aliases.cmd<cr>
@@ -51,7 +56,9 @@ Plug 'psliwka/vim-smoothie'
 Plug 'evansalter/vim-checklist'
 Plug 'vimwiki/vimwiki'
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+Plug 'neovim/nvim-lspconfig'
 call plug#end()
+
 
 set background=dark
 colorscheme gruvbox
