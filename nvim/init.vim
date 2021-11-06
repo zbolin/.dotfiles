@@ -40,6 +40,7 @@ lua require("bozilla.settings")
 "let mapleader = " "
 nnoremap <Leader>s :e $USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json<cr>
 nnoremap <Leader>v :e $MYVIMRC<cr>
+nnoremap <Leader>z :e /Users/z/.config/nvim/lua/bozilla/settings.lua<cr>
 nnoremap <Leader>a :e $USERPROFILE\GitProjects\cmd\aliases.cmd<cr>
 nnoremap <leader>c :ChecklistToggleCheckbox<cr>
 nnoremap <leader>n :NERDTree<CR>
@@ -47,6 +48,7 @@ nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>md :InstantMarkdownPreview<CR>
 
 call plug#begin('~/.config/nvim/plugged')
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
@@ -60,8 +62,9 @@ Plug 'neovim/nvim-lspconfig'
 call plug#end()
 
 
-set background=dark
-colorscheme gruvbox
+"set background=dark
+"colorscheme gruvbox
+colorscheme tokyonight
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
 let g:NERDTreeDirArrowExpandable = '▸'
