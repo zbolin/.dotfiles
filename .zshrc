@@ -111,7 +111,7 @@ source $ZSH/oh-my-zsh.sh
 ##########################################
 alias fn="nvim $HOME/.zshrc"
 alias ww="nvim $HOME/GitProjects/vimwiki/index.md"
-alias aws="nvim $HOME/GitProjects/vimwiki/aws/dva/index.md"
+alias aws="nvim $HOME/GitProjects/vimwiki/aws/acloudguru/dva/index.md"
 alias vimnotes="nvim $HOME/GitProjects/notes/vimnotes.txt"
 
 ##########################################
@@ -121,12 +121,13 @@ alias d="cd $HOME/Desktop"
 alias doc="cd $HOME/Documents"
 alias dn="cd $HOME/Downloads"
 alias gp="cd $HOME/GitProjects"
+alias gitprojects=gp
 alias dotfiles="cd $HOME/GitProjects/.dotfiles"
 alias notes="cd $HOME/GitProjects/notes"
 alias wiki="cd $HOME/GitProjects/vimwiki"
 
 ##########################################
-# removeing z@zachs-air from terminal line
+# removing z@zachs-air from terminal line
 ##########################################
 export DEFAULT_USER="$(whoami)"
 prompt_context() {
