@@ -111,8 +111,7 @@ source $ZSH/oh-my-zsh.sh
 ##########################################
 alias fn="nvim $HOME/.zshrc"
 alias ww="nvim $HOME/GitProjects/vimwiki/index.md"
-alias aws="nvim $HOME/GitProjects/vimwiki/aws/acloudguru/dva/index.md"
-alias vimnotes="nvim $HOME/GitProjects/notes/vimnotes.txt"
+alias lua="nvim $HOME/.config/nvim/lua/bozilla/settings.lua"
 
 ##########################################
 # Navigation
