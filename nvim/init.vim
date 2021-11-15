@@ -47,6 +47,7 @@ nnoremap <leader>n :NERDTree<CR>
 nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>md :InstantMarkdownPreview<CR>
 
+
 call plug#begin('~/.config/nvim/plugged')
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'tpope/vim-fugitive'
@@ -64,7 +65,7 @@ call plug#end()
 
 "set background=dark
 "colorscheme gruvbox
-colorscheme tokyonight
+"colorscheme tokyonight
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
 let g:NERDTreeDirArrowExpandable = '▸'
