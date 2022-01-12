@@ -49,6 +49,7 @@ nnoremap <leader>md :InstantMarkdownPreview<CR>
 
 
 call plug#begin('~/.config/nvim/plugged')
+Plug 'kvrohit/substrata.nvim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdtree'
@@ -62,10 +63,10 @@ Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn in
 Plug 'neovim/nvim-lspconfig'
 call plug#end()
 
-
 "set background=dark
 "colorscheme gruvbox
 "colorscheme tokyonight
+"colorscheme substrata
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
 let g:NERDTreeDirArrowExpandable = '▸'
