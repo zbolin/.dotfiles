@@ -61,10 +61,11 @@ Plug 'evansalter/vim-checklist'
 Plug 'vimwiki/vimwiki'
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 Plug 'neovim/nvim-lspconfig'
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 call plug#end()
 
 "set background=dark
-"colorscheme gruvbox
+colorscheme gruvbox
 "colorscheme tokyonight
 "colorscheme substrata
 highlight Normal ctermbg=none
@@ -72,6 +73,7 @@ highlight NonText ctermbg=none
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
+let g:airline#extensions#tabline#enabled = 1
 " Start NERDTree and put the cursor back in the other window.
 "autocmd VimEnter * NERDTree | wincmd p
 
