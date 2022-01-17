@@ -10,7 +10,7 @@ export ZSH="/Users/z/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="awesomepanda"
+ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -138,6 +138,14 @@ get_abs_filename() {
   # $1 : relative filename
   echo "$(cd "$(dirname "$1")" && pwd)/$(basename "$1")"
 }
+
+##########################################
+# coding
+##########################################
+alias example='f() { echo Your arg was $1. };f'
+alias gen='f() { mvn archetype:generate -DgroupId=com.bozilla -DartifactId=$1 -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false  };f'
+alias cbb='f() { git clone git@bitbucket.org:bozilla/$1.git };f'
+alias mci="mvn clean install"
 ##########################################
 # .dotfiles
 ##########################################
@@ -170,3 +178,4 @@ dotvim () {
     git push
     cd $HOME
 }
+
