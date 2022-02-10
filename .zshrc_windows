@@ -37,6 +37,15 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 ##########################################
+# My Stuff
+##########################################
+##########################################
+# Editing files
+##########################################
+alias fn="nvim ~/.zshrc"
+alias ww="nvim /mnt/c/Users/Z/GitProjects/vimwiki/index.md"
+alias settings="nvim /mnt/c/Users/Z/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/localstate/settings.json "
+##########################################
 # Navigation
 ##########################################
 alias d="cd /mnt/c/Users/Z/Desktop"
@@ -79,6 +88,7 @@ dots () {
 dotall () {
     dotzsh
     dotvim
+    dotsetting
 }
 dotzsh () {
     source ~/.zshrc
@@ -94,6 +104,14 @@ dotvim () {
     dotfiles
     git add .
     git commit -m "Updated init.vim"
+    git push
+    cd /mnt/c/Users/Z
+}
+dotsettings () {
+    dot /mnt/c/Users/Z/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/localstate/settings.json
+    dotfiles
+    git add .
+    git commit -m "Updated settings.json"
     git push
     cd /mnt/c/Users/Z
 }
