@@ -88,7 +88,7 @@ dots () {
 dotall () {
     dotzsh
     dotvim
-    dotsetting
+    dotsettings
 }
 dotzsh () {
     source ~/.zshrc
