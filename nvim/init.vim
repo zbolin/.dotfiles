@@ -3,6 +3,7 @@
 "EOF
 " vim rc !
 
+
 set clipboard+=unnamedplus
 set nocompatible
 filetype off
@@ -51,6 +52,7 @@ nnoremap <leader>md :InstantMarkdownPreview<CR>
 
 
 call plug#begin('~/.config/nvim/plugged')
+Plug 'itchyny/lightline.vim'
 Plug 'vim-test/vim-test'
 Plug 'kvrohit/substrata.nvim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
@@ -65,8 +67,8 @@ Plug 'vimwiki/vimwiki'
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 "set background=dark
@@ -129,3 +131,4 @@ if !exists('*ReloadVimrc')
 endif
 autocmd! BufWritePost $MYVIMRC call ReloadVimrc()
 
+let g:lightline = {'colorscheme': 'tokyonight'}
