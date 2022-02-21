@@ -95,7 +95,7 @@ dotzsh () {
     cp ~/.zshrc ~/GitProjects/.dotfiles/.zshrc_windows
     dotfiles
     git add .
-    git commit -m "Updated .zshrc"
+    git commit -m "[DESKTOP] Updated .zshrc"
     git push
     cd /mnt/c/Users/Z
 }
@@ -103,7 +103,7 @@ dotvim () {
     dots /mnt/c/Users/Z/.config/nvim
     dotfiles
     git add .
-    git commit -m "Updated init.vim"
+    git commit -m "[DESKTOP] Updated nvim"
     git push
     cd /mnt/c/Users/Z
 }
@@ -111,7 +111,7 @@ dotsettings () {
     dot /mnt/c/Users/Z/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/localstate/settings.json
     dotfiles
     git add .
-    git commit -m "Updated settings.json"
+    git commit -m "[DESKTOP] Updated settings.json"
     git push
     cd /mnt/c/Users/Z
 }
