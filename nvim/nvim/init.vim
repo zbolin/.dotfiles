@@ -18,7 +18,7 @@ set nohlsearch
 set hidden
 "set path+=**
 set noerrorbells
-"set nowrap
+set nowrap
 set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
