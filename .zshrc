@@ -167,6 +167,12 @@ GetBuckets2 () {
 GetBuckets3 () {
     aws s3 cp s3://$1/$2 $2
 }
+
+alias fj=FilterJson
+
+FilterJson() {
+    jq '.. |."Tags"? | select(. != null)' instances.json
+}
 ##########################################
 # .dotfiles
 ##########################################
