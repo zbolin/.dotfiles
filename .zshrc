@@ -193,7 +193,7 @@ dotzsh () {
     dot $HOME/.zshrc
     dotfiles
     git add .
-    git commit -m "Updated .zshrc"
+    git commit -m "[AIR] Updated .zshrc"
     git push
     cd $HOME
 }
@@ -201,7 +201,7 @@ dotvim () {
     dots $HOME/.config/nvim
     dotfiles
     git add .
-    git commit -m "Updated init.vim"
+    git commit -m "[AIR] Updated init.vim"
     git push
     cd $HOME
 }
