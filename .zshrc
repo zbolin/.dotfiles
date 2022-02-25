@@ -148,7 +148,7 @@ alias example='f() { echo Your arg was $1. };f'
 alias gen='f() { mvn archetype:generate -DgroupId=com.bozilla -DartifactId=$1 -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false  };f'
 alias cbb='f() { git clone git@bitbucket.org:bozilla/$1.git };f'
 alias mci="mvn clean install -q"
-
+alias main='f () { mvn exec:java -Dexec.mainClass="com.bozilla.$1" };f'
 ##########################################
 # aws
 ##########################################
