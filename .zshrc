@@ -4,7 +4,7 @@ export PATH=$PATH:/usr/local/go/bin
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/z/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -193,7 +193,7 @@ dotzsh () {
     dot $HOME/.zshrc
     dotfiles
     git add .
-    git commit -m "[AIR] Updated .zshrc"
+    git commit -m "Updated .zshrc"
     git push
     cd $HOME
 }
@@ -201,7 +201,7 @@ dotvim () {
     dots $HOME/.config/nvim
     dotfiles
     git add .
-    git commit -m "[AIR] Updated init.vim"
+    git commit -m "Updated init.vim"
     git push
     cd $HOME
 }
