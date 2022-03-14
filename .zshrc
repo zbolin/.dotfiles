@@ -127,7 +127,7 @@ alias notes="cd $HOME/GitProjects/notes"
 alias wiki="cd $HOME/GitProjects/vimwiki"
 
 ##########################################
-# removing z@zachs-air from terminal line
+# removing from terminal line
 ##########################################
 export DEFAULT_USER="$(whoami)"
 prompt_context() {
