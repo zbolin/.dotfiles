@@ -112,7 +112,7 @@ source $ZSH/oh-my-zsh.sh
 alias fn="nvim $HOME/.zshrc"
 alias ww="nvim $HOME/GitProjects/vimwiki/index.md"
 alias lua="nvim $HOME/.config/nvim/lua/bozilla/settings.lua"
-
+alias settings="nvim /mnt/c/Users/Z/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/localstate/settings.json"
 ##########################################
 # Navigation
 ##########################################
@@ -146,7 +146,8 @@ alias p="less -FX"
 ##########################################
 alias example='f() { echo Your arg was $1. };f'
 alias gen='f() { mvn archetype:generate -DgroupId=com.bozilla -DartifactId=$1 -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false  };f'
-alias cbb='f() { git clone git@bitbucket.org:bozilla/$1.git };f'
+alias clone='f() { git clone git@bitbucket.org:bozilla/$1.git };f'
+alias cloneb='f() { git clone git@bitbucket.org:bozilla/$1.git -b $2 };f'
 alias mci="mvn clean install -q"
 alias main='f () { mvn exec:java -Dexec.mainClass="com.bozilla.$1" };f'
 ##########################################
@@ -204,5 +205,13 @@ dotvim () {
     git commit -m "Updated init.vim"
     git push
     cd $HOME
+}
+dotsettings () {
+    dot /mnt/c/Users/Z/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/localstate/settings.json
+    dotfiles
+    git add .
+    git commit -m "Updated settings.json"
+    git push
+#    cd /mnt/c/Users/Z
 }
 
