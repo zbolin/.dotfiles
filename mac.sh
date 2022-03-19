@@ -1,3 +1,3 @@
 #!/bin/bash
 cp .zshrc ~
-rm ~/.config/nvim && cp nvim ~/.config/
+rm -rf ~/.config/nvim && cp -R nvim ~/.config/
