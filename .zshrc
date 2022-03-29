@@ -188,6 +188,7 @@ dots () {
 dotall () {
     dotzsh
     dotvim
+    dotsettings
 }
 dotzsh () {
     source $HOME/.zshrc
@@ -214,4 +215,3 @@ dotsettings () {
     git push
 #    cd /mnt/c/Users/Z
 }
-
