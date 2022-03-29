@@ -44,7 +44,6 @@ lua require("bozilla.settings")
 nnoremap <Leader>s :e $USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json<cr>
 nnoremap <Leader>v :e $MYVIMRC<cr>
 nnoremap <Leader>z :e /Users/z/.config/nvim/lua/bozilla/settings.lua<cr>
-nnoremap <Leader>a :e $USERPROFILE\GitProjects\cmd\aliases.cmd<cr>
 nnoremap <leader>c :ChecklistToggleCheckbox<cr>
 nnoremap <leader>n :NERDTree<CR>
 nnoremap <leader>t :NERDTreeToggle<CR>
@@ -72,8 +71,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lock
 call plug#end()
 
 "set background=dark
-"colorscheme gruvbox
-colorscheme tokyonight
+colorscheme gruvbox
+"colorscheme tokyonight
 "colorscheme substrata
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
@@ -131,4 +130,4 @@ if !exists('*ReloadVimrc')
 endif
 autocmd! BufWritePost $MYVIMRC call ReloadVimrc()
 
-let g:lightline = {'colorscheme': 'tokyonight'}
+let g:lightline = {'colorscheme': 'seoul256'}
