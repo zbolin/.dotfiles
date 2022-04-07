@@ -189,6 +189,7 @@ dotall () {
     dotzsh
     dotvim
     dotsettings
+    dotww
 }
 dotzsh () {
     source $HOME/.zshrc
@@ -204,6 +205,14 @@ dotvim () {
     dotfiles
     git add .
     git commit -m "Updated init.vim"
+    git push
+    cd $HOME
+}
+dotww () {
+    dots $HOME/GitProjects/vimwiki
+    dotfiles
+    git add .
+    git commit -m "Updated wiki"
     git push
     cd $HOME
 }
