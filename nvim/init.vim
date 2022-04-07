@@ -76,8 +76,8 @@ colorscheme gruvbox
 "colorscheme substrata
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
+"let g:NERDTreeDirArrowExpandable = '▸'
+"let g:NERDTreeDirArrowCollapsible = '▾'
 
 let g:airline#extensions#tabline#enabled = 1
 " Start NERDTree and put the cursor back in the other window.
