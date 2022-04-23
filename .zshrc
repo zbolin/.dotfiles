@@ -1,5 +1,5 @@
 # Go Lang
-export PATH=$PATH:/usr/local/go/bin
+#export PATH=$PATH:/usr/local/go/bin
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -107,6 +107,15 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 ##########################################
+# Colors
+##########################################
+if [[ -f !/.dircolors ]]; then
+    eval $(dircolors -b ~/.dircolors)
+elif [[ -f /etc/DIR_COLORS ]]; then
+    eval $(dircolors -b /etc/DIR_COLORS)
+fi
+
+##########################################
 # Editing files
 ##########################################
 alias fn="nvim $HOME/.zshrc"
@@ -185,12 +194,11 @@ dots () {
     yes | cp -rf "$@" $HOME/GitProjects/.dotfiles
     #get_abs_filename "$@" >> $HOME/GitProjects/.dotfiles/history.txt
 }
-dotall () {
-    dotzsh
-    dotvim
-    dotsettings
-    dotww
-}
+#dotall () {
+#    dotzsh
+#    dotvim
+#    dotww
+#}
 dotzsh () {
     source $HOME/.zshrc
     dot $HOME/.zshrc
@@ -209,10 +217,10 @@ dotvim () {
     cd $HOME
 }
 dotww () {
-    dots $HOME/GitProjects/vimwiki
+    dots $HOM3/GitProjects/vimwiki
     dotfiles
     git add .
-    git commit -m "Updated wiki"
+    git commit -m "Update wiki"
     git push
     cd $HOME
 }
@@ -223,4 +231,12 @@ dotsettings () {
     git commit -m "Updated settings.json"
     git push
 #    cd /mnt/c/Users/Z
+}
+dotps () {
+    dot /mnt/c/Users/Z/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1
+    dotfiles
+    git add .
+    git commit -m "Updated Microsoft.PowerShell_profile.ps1"
+    git push
+    cd $HOME
 }
