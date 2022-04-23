@@ -217,10 +217,10 @@ dotvim () {
     cd $HOME
 }
 dotww () {
-    dots $HOM3/GitProjects/vimwiki
+    dots $HOME/GitProjects/vimwiki
     dotfiles
     git add .
-    git commit -m "Update wiki"
+    git commit -m "Updated wiki"
     git push
     cd $HOME
 }
