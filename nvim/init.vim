@@ -4,7 +4,7 @@
 " vim rc !
 set nocompatible
 filetype off
-set clipboard=unnamedplus
+set clipboard^=unnamed,unnamedplus
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
@@ -28,11 +28,11 @@ set noshowmatch
 
 inoremap kj <ESC>
 inoremap KJ <ESC>
-nnoremap <leader>j <C-W>j
-nnoremap <leader>k <C-W>k
-nnoremap <leader>l <C-W>l
-nnoremap <leader>h <C-W>h
-nnoremap <leader>fx :Neoformat ! xml<cr>
+map <leader>j <C-W>j
+map <leader>k <C-W>k
+map <leader>l <C-W>l
+map <leader>h <C-W>h
+map <leader>fx :Neoformat ! xml<cr>
 
 lua require("bozilla.settings")
 
@@ -110,3 +110,6 @@ endfunction
 
 let g:lightline = {}
 let g:lightline = {'colorscheme': 'gruvbox'}
+
+
+
