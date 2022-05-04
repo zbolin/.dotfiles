@@ -26,6 +26,7 @@ set cmdheight=2
 set encoding=UTF-8
 set noshowmatch
 
+let mapleader = ' '
 inoremap kj <ESC>
 inoremap KJ <ESC>
 map <leader>j <C-W>j
@@ -36,7 +37,6 @@ map <leader>fx :Neoformat ! xml<cr>
 
 lua require("bozilla.settings")
 
-let mapleader = " "
 nnoremap <Leader>v :e $MYVIMRC<cr>
 
 nnoremap <leader>c :ChecklistToggleCheckbox<cr>
@@ -47,7 +47,6 @@ let g:instant_markdown_autostart = 0
 
 nnoremap <leader>t :NERDTreeToggle<CR>
 let g:NERDTreeWinSize=40
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b.NERDTree.isTabTree()) | q | endif
 
 
 call plug#begin('~/.config/nvim/plugged')
