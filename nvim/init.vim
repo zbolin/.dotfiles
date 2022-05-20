@@ -26,7 +26,6 @@ set cmdheight=2
 set encoding=UTF-8
 set noshowmatch
 
-let mapleader = ' '
 inoremap kj <ESC>
 inoremap KJ <ESC>
 map <leader>j <C-W>j
@@ -37,6 +36,7 @@ map <leader>fx :Neoformat ! xml<cr>
 
 lua require("bozilla.settings")
 
+let mapleader = " "
 nnoremap <Leader>v :e $MYVIMRC<cr>
 
 nnoremap <leader>c :ChecklistToggleCheckbox<cr>
@@ -47,9 +47,13 @@ let g:instant_markdown_autostart = 0
 
 nnoremap <leader>t :NERDTreeToggle<CR>
 let g:NERDTreeWinSize=40
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b.NERDTree.isTabTree()) | q | endif
 
 
 call plug#begin('~/.config/nvim/plugged')
+
+Plug 'tiagovla/tokyodark.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'vim-test/vim-test'
@@ -66,8 +70,12 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'sbdchd/neoformat'
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 call plug#end()
-
-colorscheme gruvbox
+let g:tokyodark_transparent_background = 0
+let g:tokyodark_enable_italic_comment = 1
+let g:tokyodark_enable_italic = 1
+let g:tokyodark_color_gamma = "1.0"
+colorscheme tokyodark
+"colorscheme gruvbox
 
 fun! TrimWhitespace()
     let l:save = winsaveview()
@@ -91,7 +99,7 @@ if !exists('*ReloadVimrc')
 endif
 autocmd! BufWritePost $MYVIMRC call ReloadVimrc()
 
-let s:enabled = 1
+let s:enabled = 0
 if s:enabled
     if (has('nvim'))
         let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
@@ -108,7 +116,7 @@ function! g:FckThatMatchParen()
 endfunction
 
 let g:lightline = {}
-let g:lightline = {'colorscheme': 'gruvbox'}
+"let g:lightline = {'colorscheme': 'gruvbox'}
 
 
 
