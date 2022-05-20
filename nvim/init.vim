@@ -25,18 +25,19 @@ set scrolloff=26
 set cmdheight=2
 set encoding=UTF-8
 set noshowmatch
-
-inoremap kj <ESC>
-inoremap KJ <ESC>
-map <leader>j <C-W>j
-map <leader>k <C-W>k
-map <leader>l <C-W>l
-map <leader>h <C-W>h
-map <leader>fx :Neoformat ! xml<cr>
+set cmdheight=1
 
 lua require("bozilla.settings")
+inoremap kj <ESC>
+inoremap KJ <ESC>
+nnoremap <leader>j <C-W>j
+nnoremap <leader>k <C-W>k
+nnoremap <leader>l <C-W>l
+nnoremap <leader>h :NERDTreeFocus<cr>
+map <leader>fx :Neoformat ! xml<cr>
 
-let mapleader = " "
+
+"let mapleader = " "
 nnoremap <Leader>v :e $MYVIMRC<cr>
 
 nnoremap <leader>c :ChecklistToggleCheckbox<cr>
@@ -51,11 +52,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b.NERDTree.isT
 
 
 call plug#begin('~/.config/nvim/plugged')
-
+Plug 'folke/tokyonight.nvim'
 Plug 'tiagovla/tokyodark.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'itchyny/lightline.vim'
-Plug 'shinchu/lightline-gruvbox.vim'
+"Plug 'itchyny/lightline.vim'
 Plug 'vim-test/vim-test'
 Plug 'pprovost/vim-ps1'
 Plug 'preservim/nerdtree'
@@ -115,8 +115,6 @@ function! g:FckThatMatchParen()
     endif
 endfunction
 
-let g:lightline = {}
-"let g:lightline = {'colorscheme': 'gruvbox'}
-
-
+"let g:lightline = {}
+"let g:lightline = {'colorscheme': 'darcula'}
 
