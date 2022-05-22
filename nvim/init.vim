@@ -52,6 +52,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b.NERDTree.isT
 
 
 call plug#begin('~/.config/nvim/plugged')
+Plug 'olimorris/onedarkpro.nvim'
+Plug 'fenetikm/falcon'
 Plug 'folke/tokyonight.nvim'
 Plug 'tiagovla/tokyodark.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -69,13 +71,17 @@ Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn in
 Plug 'neovim/nvim-lspconfig'
 Plug 'sbdchd/neoformat'
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+Plug 'luisiacc/gruvbox-baby', {'branch': 'main'}
 call plug#end()
 let g:tokyodark_transparent_background = 0
 let g:tokyodark_enable_italic_comment = 1
-let g:tokyodark_enable_italic = 1
+let g:tokyodark_enable_italic = 0
 let g:tokyodark_color_gamma = "1.0"
-colorscheme tokyodark
-"colorscheme gruvbox
+
+"colorscheme gruvbox-baby
+"colorscheme onedarkpro
+"colorscheme tokyodark
+colorscheme gruvbox
 
 fun! TrimWhitespace()
     let l:save = winsaveview()
@@ -99,7 +105,7 @@ if !exists('*ReloadVimrc')
 endif
 autocmd! BufWritePost $MYVIMRC call ReloadVimrc()
 
-let s:enabled = 0
+let s:enabled = 1
 if s:enabled
     if (has('nvim'))
         let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
