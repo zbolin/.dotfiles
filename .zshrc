@@ -10,8 +10,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
-
+# ZSH_THEME="random"
+ZSH_THEME="mgutz"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -37,7 +37,7 @@ ZSH_THEME="agnoster"
 # DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -241,4 +241,17 @@ dotps () {
     git commit -m "Updated Microsoft.PowerShell_profile.ps1"
     git push
     cd $HOME
+}
+myls() {
+  for f in *; do
+    if [ "${f##*.}" = txt ]; then
+      printf '\e[1;31m%s\e[0m\n' "$f"
+    elif [ "${f##*.}" = text ]; then
+      printf '\e[1;34m%s\e[0m\n' "$f"
+    elif [ "${f##*.}" = secret ]; then
+      printf '\e[1;32m%s\e[0m\n' "$f"
+    else
+      printf '%s\n' "$f"
+    fi
+  done
 }
