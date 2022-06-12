@@ -10,8 +10,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="random"
-ZSH_THEME="mgutz"
+#ZSH_THEME="random"
+ZSH_THEME="agnoster"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -202,7 +202,6 @@ dots () {
 #    dotww
 #}
 dotzsh () {
-    source $HOME/.zshrc
     dot $HOME/.zshrc
     dotfiles
     git add .
@@ -218,9 +217,15 @@ dotvim () {
     git push
     cd $HOME
 }
+dotdrawio () {
+    cd $HOME/GitProjects/drawio
+    git add .
+    git commit -m "Updated drawio"
+    git push
+    cd $HOME
+}
 dotww () {
-    dots $HOME/GitProjects/vimwiki
-    dotfiles
+    cd $HOME/GitProjects/vimwiki
     git add .
     git commit -m "Updated wiki"
     git push
