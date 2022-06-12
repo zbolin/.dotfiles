@@ -52,6 +52,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b.NERDTree.isT
 
 
 call plug#begin('~/.config/nvim/plugged')
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'olimorris/onedarkpro.nvim'
 Plug 'fenetikm/falcon'
 Plug 'folke/tokyonight.nvim'
@@ -80,8 +83,8 @@ let g:tokyodark_color_gamma = "1.0"
 
 "colorscheme gruvbox-baby
 "colorscheme onedarkpro
-"colorscheme tokyodark
-colorscheme gruvbox
+colorscheme tokyodark
+"colorscheme gruvbox
 
 fun! TrimWhitespace()
     let l:save = winsaveview()
@@ -105,7 +108,7 @@ if !exists('*ReloadVimrc')
 endif
 autocmd! BufWritePost $MYVIMRC call ReloadVimrc()
 
-let s:enabled = 1
+let s:enabled =1
 if s:enabled
     if (has('nvim'))
         let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
@@ -124,3 +127,8 @@ endfunction
 "let g:lightline = {}
 "let g:lightline = {'colorscheme': 'darcula'}
 
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>

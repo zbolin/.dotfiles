@@ -8,4 +8,3 @@ local time = os.date("*t")
 --else
 --    vim.g.tokyonight_style = "night"
 --end
-
