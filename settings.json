@@ -1,23 +1,23 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
+    "actions":
     [
         {
             "command": "toggleAlwaysOnTop",
             "keys": "ctrl+p"
         },
         {
-            "command": "toggleFocusMode",
-            "keys": "ctrl+f"
-        },
-        {
-            "command": 
+            "command":
             {
                 "action": "copy",
                 "singleLine": false
             },
             "keys": "ctrl+c"
+        },
+        {
+            "command": "toggleFocusMode",
+            "keys": "ctrl+f"
         },
         {
             "command": "unbound",
@@ -28,14 +28,14 @@
             "keys": "ctrl+shift+f"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "newTab"
             },
             "keys": "ctrl+t"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "splitPane",
                 "split": "auto",
@@ -48,51 +48,60 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-    "disabledProfileSources": 
+    "disabledProfileSources":
     [
         "Windows.Terminal.Azure"
     ],
-    "initialCols": 170,
-    "initialPosition": "100,100",
-    "initialRows": 40,
+    //"initialCols": 170,
+    //"initialPosition": "100,100",
+    //"initialRows": 40,
     "language": "en-US",
-    "profiles": 
+    "profiles":
     {
-        "defaults": 
+        "defaults":
         {
             "bellStyle": "none",
-            "colorScheme": "HaX0R_BLUE",
+            "colorScheme": "DraculaPlus",
             "cursorShape": "filledBox",
-            "font": 
-            {
-                "face": "SF Mono",
-                "size": 13,
-                "weight": "normal"
-            },
             "padding": "5, 5, 5, 5",
             "startingDirectory": "%USERPROFILE%/GitProjects/",
             "suppressApplicationTitle": false
         },
-        "list": 
+        "list":
         [
             {
                 "commandline": "cmd.exe /k %USERPROFILE%/GitProjects/cmd/aliases.cmd",
                 "experimental.retroTerminalEffect": true,
+                "font":
+                {
+                    "face": "Classic Console Neue",
+                    "size": 32,
+                    "weight": "normal"
+                },
                 "guid": "{adf151af-2615-4e3a-b497-84e682e8af2e}",
                 "hidden": false,
                 "name": "Command Prompt"
             },
             {
+                "font":
+                {
+                    "face": "Source Code Pro for Powerline",
+                    "size": 12,
+                    "weight": "normal"
+                },
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
-                "name": "Windows PowerShell"
+                "name": "Windows PowerShell",
+                "opacity": 30,
+                "useAcrylic": false
             },
             {
-                "colorScheme": "Gruvbox Dark",
                 "experimental.pixelShaderPath": "%USERPROFILE%/GitProjects/windows-terminal-shaders/crt.hlsl",
-                "font": 
+                "font":
                 {
-                    "size": 24
+                    "face": "Classic Console Neue",
+                    "size": 32,
+                    "weight": "normal"
                 },
                 "guid": "{6a7b96f4-fd08-476e-a57c-32b56b9a4ebc}",
                 "hidden": false,
@@ -101,8 +110,31 @@
             }
         ]
     },
-    "schemes": 
+    "schemes":
     [
+        {
+            "background": "#000000",
+            "black": "#4F4F4F",
+            "blue": "#96CBFE",
+            "brightBlack": "#7C7C7C",
+            "brightBlue": "#B5DCFF",
+            "brightCyan": "#DFDFFE",
+            "brightGreen": "#CEFFAC",
+            "brightPurple": "#FF9CFE",
+            "brightRed": "#FFB6B0",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#FFFFCC",
+            "cursorColor": "#FFA560",
+            "cyan": "#C6C5FE",
+            "foreground": "#BBBBBB",
+            "green": "#A8FF60",
+            "name": "Builtin Pastel Dark",
+            "purple": "#FF73FD",
+            "red": "#FF6C60",
+            "selectionBackground": "#363983",
+            "white": "#EEEEEE",
+            "yellow": "#FFFFB6"
+        },
         {
             "background": "#0C0C0C",
             "black": "#0C0C0C",
@@ -219,6 +251,29 @@
             "yellow": "#15D00D"
         },
         {
+            "background": "#000000",
+            "black": "#000000",
+            "blue": "#0000B2",
+            "brightBlack": "#666666",
+            "brightBlue": "#0000FF",
+            "brightCyan": "#00E5E5",
+            "brightGreen": "#00D900",
+            "brightPurple": "#E500E5",
+            "brightRed": "#E50000",
+            "brightWhite": "#E5E5E5",
+            "brightYellow": "#E5E500",
+            "cursorColor": "#23FF18",
+            "cyan": "#00A6B2",
+            "foreground": "#00FF00",
+            "green": "#00A600",
+            "name": "Homebrew",
+            "purple": "#B200B2",
+            "red": "#990000",
+            "selectionBackground": "#083905",
+            "white": "#BFBFBF",
+            "yellow": "#999900"
+        },
+        {
             "background": "#282C34",
             "black": "#282C34",
             "blue": "#61AFEF",
@@ -263,6 +318,52 @@
             "selectionBackground": "#FFFFFF",
             "white": "#FAFAFA",
             "yellow": "#C18301"
+        },
+        {
+            "background": "#1C1C1C",
+            "black": "#2F2E2D",
+            "blue": "#7FA5BD",
+            "brightBlack": "#4A4845",
+            "brightBlue": "#A1BDCE",
+            "brightCyan": "#B1E7DD",
+            "brightGreen": "#AFBEA2",
+            "brightPurple": "#D7BEDA",
+            "brightRed": "#D78787",
+            "brightWhite": "#EFEFEF",
+            "brightYellow": "#E4C9AF",
+            "cursorColor": "#E4C9AF",
+            "cyan": "#8ADBB4",
+            "foreground": "#D0D0D0",
+            "green": "#90A57D",
+            "name": "Pnevma",
+            "purple": "#C79EC4",
+            "red": "#A36666",
+            "selectionBackground": "#4D4D4D",
+            "white": "#D0D0D0",
+            "yellow": "#D7AF87"
+        },
+        {
+            "background": "#243435",
+            "black": "#757575",
+            "blue": "#4D7B82",
+            "brightBlack": "#8A8A8A",
+            "brightBlue": "#7AC3CF",
+            "brightCyan": "#ADE0E0",
+            "brightGreen": "#98D9AA",
+            "brightPurple": "#D6B2A1",
+            "brightRed": "#CF937A",
+            "brightWhite": "#E0E0E0",
+            "brightYellow": "#FAE79D",
+            "cursorColor": "#57647A",
+            "cyan": "#729494",
+            "foreground": "#D4E7D4",
+            "green": "#728C62",
+            "name": "Seafoam Pastel",
+            "purple": "#8A7267",
+            "red": "#825D4D",
+            "selectionBackground": "#FFFFFF",
+            "white": "#E0E0E0",
+            "yellow": "#ADA16D"
         },
         {
             "background": "#002B36",
@@ -403,6 +504,29 @@
             "yellow": "#808000"
         },
         {
+            "background": "#070C0E",
+            "black": "#091013",
+            "blue": "#2C9A84",
+            "brightBlack": "#333333",
+            "brightBlue": "#46D8B8",
+            "brightCyan": "#12545A",
+            "brightGreen": "#90D762",
+            "brightPurple": "#4A3059",
+            "brightRed": "#00733D",
+            "brightWhite": "#006536",
+            "brightYellow": "#E2E500",
+            "cursorColor": "#9FA86E",
+            "cyan": "#114D53",
+            "foreground": "#3E5715",
+            "green": "#6FA64C",
+            "name": "darkmatrix",
+            "purple": "#452D53",
+            "red": "#006536",
+            "selectionBackground": "#0F191C",
+            "white": "#006536",
+            "yellow": "#7E8000"
+        },
+        {
             "background": "#0F191C",
             "black": "#0F191C",
             "blue": "#3F5242",
@@ -447,7 +571,28 @@
             "selectionBackground": "#FFFFFF",
             "white": "#E5E9F0",
             "yellow": "#EBCB8B"
-        }
+        },
+       {
+  "name": "DraculaPlus",
+  "black": "#21222C",
+  "red": "#FF5555",
+  "green": "#50FA7B",
+  "yellow": "#ffcb6b",
+  "blue": "#82aaff",
+  "purple": "#c792ea",
+  "cyan": "#8BE9FD",
+  "white": "#F8F8F2",
+  "brightBlack": "#545454",
+  "brightRed": "#FF6E6E",
+  "brightGreen": "#69FF94",
+  "brightYellow": "#ffcb6b",
+  "brightBlue": "#D6ACFF",
+  "brightPurple": "#FF92DF",
+  "brightCyan": "#A4FFFF",
+  "brightWhite": "#F8F8F2",
+  "background": "#212121",
+  "foreground": "#F8F8F2"
+}
     ],
     "showTabsInTitlebar": true,
     "startOnUserLogin": false,
