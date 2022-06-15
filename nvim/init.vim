@@ -52,6 +52,14 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b.NERDTree.isT
 
 
 call plug#begin('~/.config/nvim/plugged')
+
+" Auto completion
+"Plug 'hrsh7th/cmp-nvim-lsp'
+"Plug 'hrsh7th/cmp-buffer'
+"Plug 'hrsh7th/nvim-cmp'
+
+Plug 'mfussenegger/nvim-jdtls'
+
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope.nvim'
