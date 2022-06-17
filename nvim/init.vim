@@ -59,7 +59,7 @@ call plug#begin('~/.config/nvim/plugged')
 "Plug 'hrsh7th/nvim-cmp'
 
 Plug 'mfussenegger/nvim-jdtls'
-
+Plug 'kvrohit/substrata.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -89,9 +89,10 @@ let g:tokyodark_enable_italic_comment = 1
 let g:tokyodark_enable_italic = 0
 let g:tokyodark_color_gamma = "1.0"
 
+colorscheme substrata
 "colorscheme gruvbox-baby
 "colorscheme onedarkpro
-colorscheme tokyodark
+"colorscheme tokyodark
 "colorscheme gruvbox
 
 fun! TrimWhitespace()
