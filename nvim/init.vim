@@ -89,6 +89,8 @@ let g:tokyodark_enable_italic_comment = 1
 let g:tokyodark_enable_italic = 0
 let g:tokyodark_color_gamma = "1.0"
 
+let g:substrata_transparent =  "true"
+let g:substrata_italic_functions = 1
 colorscheme substrata
 "colorscheme gruvbox-baby
 "colorscheme onedarkpro
@@ -117,7 +119,7 @@ if !exists('*ReloadVimrc')
 endif
 autocmd! BufWritePost $MYVIMRC call ReloadVimrc()
 
-let s:enabled =1
+let s:enabled = 1
 if s:enabled
     if (has('nvim'))
         let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
@@ -143,9 +145,20 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 "jdtls
-nnoremap <A-o> <Cmd>lua require'jdtls'.organize_imports()<CR>
-nnoremap crv <Cmd>lua require('jdtls').extract_variable()<CR>
+
+nnoremap <leader>a <Cmd>lua require'jdtls'.organize_imports()<CR>
+nnoremap <leader>b <Cmd>lua require('jdtls').extract_variable()<CR>
 vnoremap crv <Esc><Cmd>lua require('jdtls').extract_variable(true)<CR>
 nnoremap crc <Cmd>lua require('jdtls').extract_constant()<CR>
 vnoremap crc <Esc><Cmd>lua require('jdtls').extract_constant(true)<CR>
 vnoremap crm <Esc><Cmd>lua require('jdtls').extract_method(true)<CR>
+"
+"nnoremap <A-o> <Cmd>lua require'jdtls'.organize_imports()<CR>
+"nnoremap crv <Cmd>lua require('jdtls').extract_variable()<CR>
+"vnoremap crv <Esc><Cmd>lua require('jdtls').extract_variable(true)<CR>
+"nnoremap crc <Cmd>lua require('jdtls').extract_constant()<CR>
+"vnoremap crc <Esc><Cmd>lua require('jdtls').extract_constant(true)<CR>
+"vnoremap crm <Esc><Cmd>lua require('jdtls').extract_method(true)<CR>
+
+
+
