@@ -130,6 +130,13 @@ dotdrawio () {
     git push
     gp
 }
+dotdrawio2 () {
+    cd /mnt/c/Users/Z/GitProjects/drawio
+    git add .
+    git commit -m "Updated drawio"
+    git push
+    #gp
+}
 dotww () {
     cd $HOME/GitProjects/vimwiki
     git add .
