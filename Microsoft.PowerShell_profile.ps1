@@ -51,12 +51,12 @@ function mcidst {
     mvn clean install -DskipTests
 }
 
-function clone($a) {
-    git clone git@bitbucket.org/$a.git
+function clonegithub($a) {
+    git clone git@github.com:zbolin/$a.git
 }
 
-function cloneb($a,$b) {
-    git clone git@bitbucket.org/$a.git -b $b
+function clonegithubb($a,$b) {
+    git clone git@github.com:zbolin/$a.git -b $b
 }
 
 function d {
@@ -77,4 +77,10 @@ function gp {
 
 function settings {
     nvim 'C:\Users\Z\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\localstate\settings.json'
+}
+
+function bcomp {
+    $b = "C:\Program Files\Beyond Compare 4\BCompare.exe"
+    $files = "C:\Users\Z\Desktop\LEFT.txt  C:\Users\Z\Desktop\RIGHT.txt"
+    Start-Process -FilePath $b -ArgumentList $files
 }
