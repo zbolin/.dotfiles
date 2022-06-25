@@ -57,7 +57,7 @@ call plug#begin('~/.config/nvim/plugged')
 "Plug 'hrsh7th/cmp-nvim-lsp'
 "Plug 'hrsh7th/cmp-buffer'
 "Plug 'hrsh7th/nvim-cmp'
-
+Plug 'navarasu/onedark.nvim'
 Plug 'mfussenegger/nvim-jdtls'
 Plug 'kvrohit/substrata.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -84,14 +84,15 @@ Plug 'sbdchd/neoformat'
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 Plug 'luisiacc/gruvbox-baby', {'branch': 'main'}
 call plug#end()
-let g:tokyodark_transparent_background = 0
-let g:tokyodark_enable_italic_comment = 1
-let g:tokyodark_enable_italic = 0
-let g:tokyodark_color_gamma = "1.0"
+"let g:tokyodark_transparent_background = 0
+"let g:tokyodark_enable_italic_comment = 1
+"let g:tokyodark_enable_italic = 0
+"let g:tokyodark_color_gamma = "1.0"
 
-let g:substrata_transparent =  "true"
-let g:substrata_italic_functions = 1
-colorscheme substrata
+"let g:substrata_transparent =  "true"
+"let g:substrata_italic_functions = 1
+"colorscheme substrata
+colorscheme onedark
 "colorscheme gruvbox-baby
 "colorscheme onedarkpro
 "colorscheme tokyodark
