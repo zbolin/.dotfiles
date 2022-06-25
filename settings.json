@@ -52,9 +52,10 @@
     [
         "Windows.Terminal.Azure"
     ],
-    //"initialCols": 170,
-    //"initialPosition": "100,100",
-    //"initialRows": 40,
+    "launchMode": "focus",
+    "initialCols": 150,
+    "initialPosition": "175,100",
+    "initialRows": 35,
     "language": "en-US",
     "profiles":
     {
@@ -92,7 +93,7 @@
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell",
-                //"opacity": 99,
+                "opacity": 60,
                 "useAcrylic": false
             },
             {
