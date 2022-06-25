@@ -34,6 +34,7 @@ alias d="cd $HOME/Desktop"
 alias doc="cd $HOME/Documents"
 alias dn="cd $HOME/Downloads"
 alias gp="cd $HOME/GitProjects"
+alias gp2="cd /mnt/c/Users/Z/GitProjects/"
 alias gitprojects=gp
 alias itermscripts="cd $HOME/Library/Application\ Support/iTerm2/Scripts/itermscripts"
 alias dotfiles="cd $HOME/GitProjects/.dotfiles"
@@ -113,7 +114,6 @@ dotzsh () {
     git add .
     git commit -m "Updated .zshrc"
     git push
-    gp
 }
 dotvim () {
     dots $HOME/.config/nvim
@@ -121,28 +121,24 @@ dotvim () {
     git add .
     git commit -m "Updated init.vim"
     git push
-    gp
 }
 dotdrawio () {
     cd $HOME/GitProjects/drawio
     git add .
     git commit -m "Updated drawio"
     git push
-    gp
 }
 dotdrawio2 () {
     cd /mnt/c/Users/Z/GitProjects/drawio
     git add .
     git commit -m "Updated drawio"
     git push
-    #gp
 }
 dotww () {
     cd $HOME/GitProjects/vimwiki
     git add .
     git commit -m "Updated wiki"
     git push
-    gp
 }
 dotsettings () {
     dot /mnt/c/Users/Z/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/localstate/settings.json
@@ -150,7 +146,6 @@ dotsettings () {
     git add .
     git commit -m "Updated settings.json"
     git push
-#    cd /mnt/c/Users/Z
 }
 dotps () {
     dot /mnt/c/Users/Z/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1
@@ -158,7 +153,6 @@ dotps () {
     git add .
     git commit -m "Updated Microsoft.PowerShell_profile.ps1"
     git push
-    gp
 }
 myls() {
   for f in *; do
