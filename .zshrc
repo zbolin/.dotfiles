@@ -26,10 +26,12 @@ fi
 alias fn="nvim $HOME/.zshrc"
 alias ww="nvim $HOME/GitProjects/vimwiki/index.md"
 alias lua="nvim $HOME/.config/nvim/lua/bozilla/settings.lua"
+alias javalua="nvim $HOME/.config/nvim/ftplugin/java.lua"
 alias settings="nvim /mnt/c/Users/Z/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/localstate/settings.json"
 ##########################################
 # Navigation
 ##########################################
+alias config="cd $HOME/.config"
 alias d="cd $HOME/Desktop"
 alias doc="cd $HOME/Documents"
 alias dn="cd $HOME/Downloads"
@@ -91,6 +93,16 @@ alias fj=FilterJson
 FilterJson() {
     jq '.. |."Tags"? | select(. != null)' instances.json
 }
+
+##########################################
+# java
+##########################################
+alias j12="export JAVA_HOME=`/usr/libexec/java_home -v 12`; java -version"
+alias j11="export JAVA_HOME=`/usr/libexec/java_home -v 11`; java -version"
+alias j10="export JAVA_HOME=`/usr/libexec/java_home -v 10`; java -version"
+alias j9="export JAVA_HOME=`/usr/libexec/java_home -v 9`; java -version"
+alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
+alias j7="export JAVA_HOME=`/usr/libexec/java_home -v 1.7`; java -version"
 ##########################################
 # .dotfiles
 ##########################################
@@ -116,7 +128,7 @@ dotzsh () {
     git push
 }
 dotvim () {
-    dots $HOME/.config/nvim
+    dots ~/.config/nvim
     dotfiles
     git add .
     git commit -m "Updated init.vim"
@@ -139,6 +151,14 @@ dotww () {
     git add .
     git commit -m "Updated wiki"
     git push
+}
+dotz () {
+    cd $HOME/GitProjects/z
+    git add .
+    git commit -m "Updated z"
+    git push
+    cd $HOME/GitProjects/z
+
 }
 dotsettings () {
     dot /mnt/c/Users/Z/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/localstate/settings.json
