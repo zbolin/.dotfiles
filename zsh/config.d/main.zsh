@@ -3,6 +3,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 ZSH_THEME="agnoster"
 DISABLE_LS_COLORS="true"
 
+# Custom completions
+
+
 plugins=(
     git
     zsh-syntax-highlighting
@@ -39,3 +42,9 @@ get_abs_filename() {
 alias s="source $HOME/.zshrc"
 
 
+# Load custom completions dir
+fpath=($HOME/.config/zsh/completions $fpath)
+# Enables completion system
+autoload compinit
+# init completions without insecure (-i)
+compinit -i
