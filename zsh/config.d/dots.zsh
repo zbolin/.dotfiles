@@ -8,8 +8,6 @@ dots () {
 dotall () {
     dotzsh
     dotvim
-    dotww
-    dotdrawio
 }
 dotzsh () {
     dot $HOME/.zshrc

@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$HOME/.cargo/bin:$PATH"
-ZSH_THEME="duellj"
+ZSH_THEME="intheloop"
 DISABLE_LS_COLORS="true"
 
 # Custom completions
