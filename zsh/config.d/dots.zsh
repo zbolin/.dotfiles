@@ -1,3 +1,4 @@
+alias dotfiles="cd $HOME/GitProjects/.dotfiles"
 dot () {
     cp "$@" $HOME/GitProjects/.dotfiles
 }
