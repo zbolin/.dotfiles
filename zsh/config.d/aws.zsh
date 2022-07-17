@@ -23,12 +23,16 @@ set-aws-keys() {
 
 alias aconf="nvim $HOME/.aws/config"
 alias acred="nvim $HOME/.aws/credentials"
-alias gb=GetBuckets
-alias gb2=GetBuckets2
-alias gb3=GetBuckets3
+# alias gb=GetBuckets
+# alias gb2=GetBuckets2
+# alias gb3=GetBuckets3
+
 # GetBuckets | pbcopy
 CreateBucket() {
     aws s3api create-bucket --bucket $1 --region us-east-1
+}
+CopyFile() {
+    aws s3 cp $2 s3://$1
 }
 
 GetBuckets () {
