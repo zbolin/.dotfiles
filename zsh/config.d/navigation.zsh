@@ -1,4 +1,3 @@
-alias fn="cd $HOME/.config/zsh/config.d"
 alias config="cd $HOME/.config"
 alias d="cd $HOME/Desktop"
 alias doc="cd $HOME/Documents"

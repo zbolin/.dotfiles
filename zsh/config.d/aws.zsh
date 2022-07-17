@@ -21,21 +21,35 @@ set-aws-keys() {
 }
 
 
-
 alias aconf="nvim $HOME/.aws/config"
 alias acred="nvim $HOME/.aws/credentials"
 alias gb=GetBuckets
 alias gb2=GetBuckets2
 alias gb3=GetBuckets3
+# GetBuckets | pbcopy
+CreateBucket() {
+    aws s3api create-bucket --bucket $1 --region us-east-1
+}
+
 GetBuckets () {
     aws s3 ls | awk '{print $3}'
 }
 
-GetBuckets2 () {
+ListBucket () {
     aws s3 ls s3://$1 | awk '{print $4}'
 }
 
-GetBuckets3 () {
-    aws s3 cp s3://$1/$2 $2
+Website() {
+    aws s3 website $1 --index-document index.html --error-document error.html
+}
+WebAddress() {
+    echo "http://$1.s3-website-us-east-1.amazonaws.com/"
+}
+GetBucketPolicy () {
+    aws s3api get-bucket-policy --bucket $1
+}
+
+PutBucketPolicy () {
+    aws s3api put-bucket-policy --bucket $1 --policy file://$2
 }
 

@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$HOME/.cargo/bin:$PATH"
-ZSH_THEME="agnoster"
+ZSH_THEME="duellj"
 DISABLE_LS_COLORS="true"
 
 # Custom completions
@@ -48,3 +48,5 @@ fpath=($HOME/.config/zsh/completions $fpath)
 autoload compinit
 # init completions without insecure (-i)
 compinit -i
+
+
