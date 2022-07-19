@@ -63,3 +63,10 @@ PutBucketPolicy () {
     aws s3api put-bucket-policy --bucket $1 --policy file://$2
 }
 
+DeleteBucketFolderRecursive() {
+    aws s3 rm s3://$1 --recursive
+}
+
+DeleteBucket() {
+    aws s3api delete-bucket --bucket $1 --region us-east-1 2>&1 > /dev/null
+}

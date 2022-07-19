@@ -7,6 +7,11 @@ CreateWebsite() {
     tmp=$(mktemp)
     jq '.Statement[0].Resource[0] = "arn:aws:s3:::my-bucket-'$1'/*"' bucketpolicy.json > "tmp" && mv "tmp" bucketpolicy.json
     PutBucketPolicy my-bucket-$1 bucketpolicy.json
-    WebAddress my-bucket-$1
+    OpenWebAddress my-bucket-$1
+}
+
+DestroyWebsite() {
+    DeleteBucketFolderRecursive my-bucket-$1
+    DeleteBucket my-bucket-$1
 }
 
