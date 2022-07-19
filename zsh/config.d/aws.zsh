@@ -67,3 +67,7 @@ DeleteBucket() {
 AddUserToGroup() {
     aws iam add-user-to-group --user-name $1 --group-name $2
 }
+
+RemoveUserFromGroup() {
+    aws iam remove-user-from-group --user-name $1 --group-name $2
+}
