@@ -1,14 +1,6 @@
-
-
 alias aconf="nvim $HOME/.aws/config"
 alias acred="nvim $HOME/.aws/credentials"
-alias gb=GetBuckets
-alias gb2=GetBuckets2
-alias gb3=GetBuckets3
-# GetBuckets | pbcopy
-Hello() {
-    echo "Hello $1"
-}
+
 CreateBucket() {
     aws s3api create-bucket --bucket $1 --region us-east-1 2>&1 > /dev/null
 }
@@ -28,12 +20,12 @@ ListBucket () {
 Website() {
     aws s3 website $1 --index-document index.html --error-document error.html
 }
-WebAddress() {
-    echo "http://$1.s3-website-us-east-1.amazonaws.com/"
-}
+
 OpenWebAddress() {
+    echo "http://$1.s3-website-us-east-1.amazonaws.com/"
     open "http://$1.s3-website-us-east-1.amazonaws.com/"
 }
+
 GetBucketPolicy () {
     aws s3api get-bucket-policy --bucket $1
 }
