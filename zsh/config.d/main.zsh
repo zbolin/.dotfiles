@@ -49,4 +49,4 @@ autoload compinit
 # init completions without insecure (-i)
 compinit -i
 
-
+alias copyLastCmd='fc -ln -1 | awk '{$1=$1}1' | pbcopy '

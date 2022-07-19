@@ -27,12 +27,19 @@ alias gb=GetBuckets
 alias gb2=GetBuckets2
 alias gb3=GetBuckets3
 # GetBuckets | pbcopy
+Hello() {
+    echo "Hello $1"
+}
 CreateBucket() {
-    aws s3api create-bucket --bucket $1 --region us-east-1
+    aws s3api create-bucket --bucket $1 --region us-east-1 2>&1 > /dev/null
 }
 
 GetBuckets () {
     aws s3 ls | awk '{print $3}'
+}
+
+CopyFile () {
+    aws s3 cp $2 s3://$1
 }
 
 ListBucket () {
@@ -44,6 +51,9 @@ Website() {
 }
 WebAddress() {
     echo "http://$1.s3-website-us-east-1.amazonaws.com/"
+}
+OpenWebAddress() {
+    open "http://$1.s3-website-us-east-1.amazonaws.com/"
 }
 GetBucketPolicy () {
     aws s3api get-bucket-policy --bucket $1
