@@ -1,6 +1,13 @@
 alias aconf="nvim $HOME/.aws/config"
 alias acred="nvim $HOME/.aws/credentials"
 
+CloudUser() {
+
+#    sed -i '6d' ~/.aws/credentials
+#:%s/=.*/
+#    perl -p -i -e 's/=.*/g if $. == 6' ~/.aws/credentials
+#    perl -p -i -e 's/= /= '$1'/g if $. == 6' ~/.aws/credentials
+}
 CreateBucket() {
     aws s3api create-bucket --bucket $1 --region us-east-1 2>&1 > /dev/null
 }
