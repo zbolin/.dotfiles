@@ -1,3 +1,4 @@
+alias awszsh="nvim $HOME/.config/zsh/config.d/aws.zsh"
 alias ww="nvim $HOME/GitProjects/vimwiki/index.md"
 alias fn="cd $HOME/.config/zsh/config.d"
 alias lua="nvim $HOME/.config/nvim/lua/bozilla/settings.lua"
