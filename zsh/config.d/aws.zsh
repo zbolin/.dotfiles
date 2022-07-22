@@ -1,3 +1,7 @@
+
+ak () {
+    echo "\n[cloud_user_$1]\naws_access_key_id = $1\naws_secret_access_key=$2" >> ~/.aws/credentials
+}
 aws-profiles() {
   cat ~/.aws/credentials | grep '\[' | grep -v '#' | tr -d '[' | tr -d ']'
 }
